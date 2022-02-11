@@ -1,2 +1,2 @@
-
--DCATKIN_DEVEL_PREFIX=/home/mjk119/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mjk119/catkin_ws/install -G Unix Makefiles
+threelink:twolink_v0
+-DCATKIN_DEVEL_PREFIX=/home/mjk119/morph_lab_project/devel -DCMAKE_INSTALL_PREFIX=/home/mjk119/morph_lab_project/install -G Unix Makefiles

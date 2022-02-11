@@ -1,0 +1,8 @@
+prefix=/home/mjk119/morph_lab_project/devel
+
+Name: twolink_v0
+Description: Description of twolink_v0
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

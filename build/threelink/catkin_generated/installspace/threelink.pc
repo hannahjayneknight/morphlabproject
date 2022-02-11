@@ -1,0 +1,8 @@
+prefix=/home/mjk119/morph_lab_project/install
+
+Name: threelink
+Description: Description of threelink
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
