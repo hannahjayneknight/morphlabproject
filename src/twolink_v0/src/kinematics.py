@@ -130,6 +130,9 @@ def main(task):
 
         q_old = np.zeros(3) #initial configuration
         Robot.sendCommands(q_old)
+        
+        print("Before for loop")
+        
         for i in range(m):
 
             P = CartPoints[i, :]
@@ -171,7 +174,7 @@ def set_joint_publisher():
     pubs = []
 
     for i in range(3):
-        topic_name = "/DESE3R/joint_"+str(i)+"_position_controller/command"
+        topic_name = "/TWOLINK/joint_"+str(i)+"_position_controller/command"
         pub = rospy.Publisher(topic_name,Float64,queue_size=1000)
         pubs.append(pub)
 
@@ -361,7 +364,7 @@ class RobotKineClass():
                 self.ROSPublishers[i].publish(q[i])
                 n_conn = self.ROSPublishers[i].get_num_connections()
                 rate.sleep()
-
+	
 
 
 if __name__ == "__main__":
