@@ -23,4 +23,4 @@ Setup:
 3. In another terminal, type "rosrun gazebo_ros gazebo". _Launching gazebo_
 4. In another terminal, go to the root of this repository and type "source devel/setup.bash" if you haven't added this to the .bash file.
 5. In the same terminal as step (4), type "roslaunch twolink_v0 twolink_v0.launch".
-6. To see the robot's control (highly oscillatory) type "cd [root directory]/src/twolink_v0/src" followed by "python kinematics.py full" 
+6. To see the robot's control (highly oscillatory) type "cd [root directory]/src/twolink_v0/src" followed by "python3 kinematics.py full" 
