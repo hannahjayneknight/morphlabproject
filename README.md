@@ -43,6 +43,7 @@ SimpleFOC was downloaded as a library to the Arduino IDE: https://docs.simplefoc
 
 ## Project structure
 
+```
 .
 ├── build
 │   ├── atomic_configure
@@ -378,4 +379,4 @@ SimpleFOC was downloaded as a library to the Arduino IDE: https://docs.simplefoc
         │       └── workspace_points.csv
         └── urdf
             └── robot_model_gazebo.xacro
-
+```
