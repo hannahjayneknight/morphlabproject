@@ -24,3 +24,9 @@ Setup:
 4. In another terminal, go to the root of this repository and type "source devel/setup.bash" if you haven't added this to the .bash file.
 5. In the same terminal as step (4), type "roslaunch twolink_v0 twolink_v0.launch".
 6. To see the robot's control (highly oscillatory) type "cd [root directory]/src/twolink_v0/src" followed by "python3 kinematics.py full" 
+
+### The motors
+
+Two iPower GBM4108H-120T Gimbal Motors will be used.
+
+https://docs.simplefoc.com/torque_mode describes how torque control is implemented.
