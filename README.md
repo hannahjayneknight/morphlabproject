@@ -30,3 +30,11 @@ Setup:
 Two iPower GBM4108H-120T Gimbal Motors will be used.
 
 https://docs.simplefoc.com/torque_mode describes how torque control is implemented.
+
+### Connecting ROS and Arduino
+
+https://maker.pro/arduino/tutorial/how-to-use-arduino-with-robot-operating-system-ros
+
+https://maker.pro/arduino/tutorial/how-to-control-a-robot-arm-with-ros-and-arduino
+
+--> write later
