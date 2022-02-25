@@ -70,7 +70,7 @@
     <child
       link="casing_0" />
     <axis
-      xyz="0 0 1" />
+      xyz="1 0 0" />
     <limit
       lower="-3.1415"
       upper="3.1415"
@@ -131,7 +131,7 @@
     <child
       link="link_0" />
     <axis
-      xyz="0 0 1" />
+      xyz="1 0 0" />
     <limit
       lower="-3.1415"
       upper="3.1415"
