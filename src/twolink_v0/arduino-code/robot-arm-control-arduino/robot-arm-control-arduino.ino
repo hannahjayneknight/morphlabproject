@@ -3,7 +3,13 @@
 // instantiate driver
 // instantiate sensor
 // instantiate current sense
+
 // instantiate motor
+BLDCMotor motor = BLDCMotor(11); // how do we know our pair pins no?
+//  BLDCDriver3PWM( int phA, int phB, int phC, int enA, int enB, int enC )
+//  - phA, phB, phC - A,B,C phase pwm pins
+//  - enA, enB, enC - enable pin for each phase (optional)
+BLDCDriver3PWM driver = BLDCDriver3PWM(1, 2, 3);
 
 void setup() {  
 

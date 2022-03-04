@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export ROS_PACKAGE_PATH='/home/mjk119/catkin_ws/src:/home/mjk119/morph_lab_project/src:/opt/ros/noetic/share'
+export PWD='/home/mjk119/morph_lab_project/build'

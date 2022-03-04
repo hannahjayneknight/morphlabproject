@@ -364,6 +364,14 @@ class RobotKineClass():
                 self.ROSPublishers[i].publish(q[i])
                 n_conn = self.ROSPublishers[i].get_num_connections()
                 rate.sleep()
+                
+                
+     #read serial
+    #def serial(self):
+        
+                  
+                
+
 	
 
 
