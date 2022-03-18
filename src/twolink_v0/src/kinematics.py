@@ -21,9 +21,8 @@ def main(task):
     #GENERATE ROBOT MODEL
     l1 = 1.
     l2 = 1.
-    l3 = 1.
 
-    Robot = RobotKineClass([l1,l2,l3])
+    Robot = RobotKineClass([l1,l2])
 
     # FORWARD KINEMATICS
     if task == "fk":
@@ -222,7 +221,7 @@ class RobotKineClass():
 
         self.ROSPublishers = set_joint_publisher()
 
-        self.nj = 3    #number of joints
+        self.nj = 2    #number of joints
         self.links = link_lengths    # length of links
 
         ################################################ TASK 1
@@ -230,9 +229,8 @@ class RobotKineClass():
         #d,theta,a,alpha
         self.DH_tab = np.array([[self.links[0], 0., 0., 0.],
                                 [0., 0., 0., pi/2],
-                                [0., 0., self.links[1], 0.],
-                                [0., 0., self.links[2], 0.]])
-        self.joint_types = 'rrr' # three revolute joints
+                                [0., 0., self.links[1], 0.]])
+        self.joint_types = 'rr' # two revolute joints
 
     #Computes Forward Kinematics. Returns 3x1 position vector
     def getFK(self,q):
@@ -264,7 +262,7 @@ class RobotKineClass():
     #Check if point is in WS. returns true or false
     def checkInWS(self, P):
         xP, yP, zP = P
-        l0, l1, l2 = self.links
+        l0, l1 = self.links
        
         ################################################ TASK 4
         val = np.power(xP, 2) + np.power(yP, 2) + np.power((zP-l0), 2)
@@ -284,7 +282,6 @@ class RobotKineClass():
 
         l0 = self.links[0]
         l1 = self.links[1]
-        l2 = self.links[2]
 
         xP = P[0]
         yP = P[1]
@@ -342,8 +339,8 @@ class RobotKineClass():
        
     # Computes Differential Kinematics
     def getDK(self, q, q_dot):
-        q0, q1, q2 = q
-        l0, l1, l2 = self.links
+        q0, q1 = q
+        l0, l1 = self.links
        
         ################################################ TASK 7
         self.Jacobian = np.array([[ -sin(q0)*( l1*cos(q1) + l2*cos(q1+q2) ) , -cos(q0)*(l1*sin(q1)+l2*sin(q1+q2)), -l2*sin(q1+q2)*cos(q0)],

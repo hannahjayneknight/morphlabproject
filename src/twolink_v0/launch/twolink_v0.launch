@@ -1,7 +1,7 @@
 <launch>
 
   <param name="robot_description"
-    command="$(find xacro)/xacro --inorder '$(find twolink_v0)/urdf/robot_model_gazebo.xacro'" />
+    command="$(find xacro)/xacro --inorder '$(find twolink_v0)/urdf/robot_model_twolink.xacro'" />
 
 
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
@@ -13,8 +13,7 @@
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
 output="screen" ns="/TWOLINK" args="joint_state_controller
  joint_0_position_controller
- joint_1_position_controller
- joint_2_position_controller"/>
+ joint_1_position_controller"/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"

@@ -19,11 +19,14 @@ This repository contains the code for the simulated robot.
 
 Setup:
 1. Open repoisitory in Linux environment with ROS installed.
-2. In one terminal, type "roscore". _Initializing ROS_
-3. In another terminal, type "rosrun gazebo_ros gazebo". _Launching gazebo_
-4. In another terminal, go to the root of this repository and type "source devel/setup.bash" if you haven't added this to the .bash file.
-5. In the same terminal as step (4), type "roslaunch twolink_v0 twolink_v0.launch".
-6. To see the robot's control (highly oscillatory) type "cd [root directory]/src/twolink_v0/src" followed by "python3 kinematics.py full" 
+2. In one terminal, source the ROS environment, type "source /opt/ros/noetic/setup.bash". ADD NOTE ABOUT bashrc file "source ~/morphlabproject/devel/setup.bash".
+3. Then, type "roscore". _Initializing ROS_
+4. In another terminal, navigate to the root of this repository by typing "cd morphlabproject/".
+5. Then, source the devel folder, type "source devel/setup.bash" (unless added this to the .bash file.)
+6. Then, type "rosrun gazebo_ros gazebo". _Launching gazebo_
+7. In another terminal, repeat steps 4 and 5.
+8. Then, type "roslaunch twolink_v0 twolink_v0.launch".
+9. To see the robot's control (highly oscillatory) type "cd [root directory]/src/twolink_v0/src" followed by "python3 kinematics.py full" 
 
 ### The hardware
 
